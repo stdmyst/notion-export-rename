@@ -15,27 +15,27 @@
 
 Источник: https://regexper.com/
 
-- Поиск идентификатора в наименовании файлов и директорий:
+- Поиск идентификаторов в наименовании файлов и директорий:
     
     ```python
     regex = re.compile(r"(\s\w{30,})(?:\.[a-zA-Z]{1,4})?$")
     ```
     
-    ![image (2).svg](imgs/image.svg)
+    ![image (2).svg](images/image.svg)
     
-- Поиск ссылок в .md файле:
+- Поиск ссылок в .md файлах:
     
     ```python
     regex = re.compile(r"\[(?:\n)?.*\(?.*\)?.*\](\(.*\.[a-zA-Z]{1,4}\))")
     ```
     
-    ![image (3).svg](imgs/image%20(1).svg)
+    ![image (3).svg](images/image%20(1).svg)
     
-- Обработка ссылок в .md файле (удаление идентификаторов):
+- Обработка ссылок в .md файлах (удаление идентификаторов):
     
     ```python
     u_regex = re.compile(r"(\s\w{30,})(?:\/|(?:\.[a-zA-Z]{1,4}))")
     u_match = u_regex.findall(unquote_el.replace("\\", "/"))
     ```
     
-    ![image (4).svg](imgs/image%20(2).svg)
+    ![image (4).svg](images/image%20(2).svg)
